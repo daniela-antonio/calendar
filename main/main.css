@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* HEADER */
+
+header {
+    background: rgb(233, 222, 203);
+    height: 64px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 100px;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.logo .logo-text {
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+    color: #838383;
+}
+
+/* Login / Sign up */
+
+.btn {
+    padding: 8px 20px 8px;
+    border-radius: 50px;
+    border: 1px solid rgb(183, 182, 182);
+    color: rgb(94, 90, 90);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn.login-btn:hover {
+    background-color: rgb(183, 182, 182);
+    color: #fff;
+}
+
+.btn.sign-up-btn {
+    background-color: rgb(103, 137, 238);
+    color: white;
+}
+
+.btn.sign-up-btn:hover {
+    background-color: #5846fb;
+}
+
+/* MAIN PART */
+
+.main-container {
+    display: flex;
+}
+
+.calendar-text {
+    margin-right: 40px;
+    width: 40%;
+}
+
+.calendar-img {
+    width: 60%;
+}
+
+.heading {
+    display: block;
+    font-size: 50px;
+    margin: 25px 0 40px;
+    /* word-break: break-word;
+    word-spacing: 50000px; */
+    font-weight: bold;
+    color: rgb(22, 22, 22);
+    display: table-caption;
+}
+
+.text {
+    color: rgb(76, 76, 76);
+    font-size: 22px;
+}
