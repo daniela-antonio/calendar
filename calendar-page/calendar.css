@@ -1,6 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     overflow: hidden;
 }
+
 
 h2 {
     display: flex;
@@ -103,19 +110,20 @@ h2 {
 .calendar .day:not(.prev-date, .next-date):hover {
     color: #fff;
     background-color: rgba(236, 15, 162, 0.796);
+    
 }
 
 .calendar .days .prev-date,
 .calendar .days .next-date {
     color: #373c4f ;
-    cursor: default;
-    cursor: text;
+    pointer-events: none;
     /*dadcdc*/
 }
 
 .calendar .days .active {
-    font-size: 1.8rem;
-    color: #373c4f;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background-color: rgba(236, 15, 162, 0.796);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -123,11 +131,11 @@ h2 {
     font-size: 1.8rem;
 }
 
-.calendar .days .event {
+.calendar .days .underline {
     position: relative;
 }
 
-.calendar .days .event::after {
+.calendar .days .underline::after {
     content: "";
     position: absolute;
     bottom: 10%;
@@ -139,7 +147,7 @@ h2 {
     background-color: rgb(118, 0, 118);
 }
 
-.calendar .event:hover::after {
+.calendar .underline:hover::after {
     background-color: #fff;
 }
 
@@ -147,4 +155,173 @@ h2 {
 
 .right {
     width: 40%;
+    padding: 20px 0;
+    min-height: 100%;
+    padding: 13px 1px;
+}
+
+.right-header {
+    height: 20%;
+}
+
+.right-body {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-footer {
+    height: 20%;
+}
+
+
+/* TODAY DATE */
+
+.right .today-date {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.right .event-day {
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+/* ADD EVENT */
+
+.add-event-wrapper {
+    position: relative;
+    bottom: 20px;
+    left: 0;
+    width: 80%;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #e4e1e1;
+    padding: 8px;
+    margin-left: 22px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.add-event-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    border-bottom: 1px solid gray;
+}
+
+.add-event-header .add-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #545252;
+}
+
+.add-event-input .event-name {
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    padding: 4px 5px;
+    border-radius: 10px;
+    width: 80%;
+    outline: none;
+    background-color: #b1aeae;
+    color: #484646;
+}
+
+.add-event-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-event-body .fa-plus-circle {
+    color: gray;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* EVENTS */
+
+.events .event {
+    margin-bottom: 10px;
+}
+
+.events .event-title {
+    font-size: 1rem;
+    margin-right: 3px;
+    padding: 0 9.3px 0 2px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    /* box-shadow: rgba(10, 10, 111, 0.2) 0px 7px 29px 0px; */
+    background: linear-gradient(90deg, #956E95, transparent);
+    border-radius: 15px;
+    padding: 3px 6px;
+    min-height: 24px;
+}
+
+.title:nth-child(even) {
+    background: linear-gradient(90deg, #788fdc, transparent);
+}
+
+.title .fa-circle {
+    color: #e0e0e0;
+}
+
+.title .fa-circle:hover {
+    cursor: pointer;
+}
+
+.title .fa-check-circle {
+    color: #23b719;
+    cursor: pointer;
+}
+
+.title .fa-circle,
+.title .fa-check-circle {
+    background-color: #fff;
+    font-size: 1.3rem;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    margin-right: 5px;
+}
+
+.title .fa-times-circle {
+    opacity: 0.4;
+}
+
+.title .fa-times-circle:hover {
+    opacity: 1;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: rgb(234, 41, 41);
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #fff;
+}
+
+/* NO EVENTS MESSAGE */
+
+.right-body {
+    position: relative;
+}
+
+.no-events {
+    position: absolute;
+    left: 30%;
+    bottom: 67%;
+    font-size: 1.9rem;
+    opacity: .5;
+}
+
+.no-events.disabled {
+    visibility: hidden;
 }

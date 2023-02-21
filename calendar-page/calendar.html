@@ -16,7 +16,6 @@
 <body>
     <h2>Hello, Daniela !</h2>
     <div class="container">
-
         <div class="left">
             <div class="calendar">
                 <div class="month">
@@ -34,46 +33,51 @@
                     <div>sun</div>
                 </div>
                 <div class="days">
-                    <div class="day prev-date">30</div>
-                    <div class="day prev-date">31</div>
-                    <div class="day">1</div>
-                    <div class="day">2</div>
-                    <div class="day">3</div>
-                    <div class="day">4</div>
-                    <div class="day">5</div>
-                    <div class="day">6</div>
-                    <div class="day">7</div>
-                    <div class="day">8</div>
-                    <div class="day">9</div>
-                    <div class="day">10</div>
-                    <div class="day">11</div>
-                    <div class="day">12</div>
-                    <div class="day today">13</div>
-                    <div class="day active">14</div>
-                    <div class="day active">15</div>
-                    <div class="day">16</div>
-                    <div class="day active">17</div>
-                    <div class="day">18</div>
-                    <div class="day active">19</div>
-                    <div class="day active">20</div>
-                    <div class="day">21</div>
-                    <div class="day">22</div>
-                    <div class="day">23</div>
-                    <div class="day">24</div>
-                    <div class="day">25</div>
-                    <div class="day">26</div>
-                    <div class="day">27</div>
-                    <div class="day">28</div>
-                    <div class="day next-date">1</div>
-                    <div class="day next-date">2</div>
-                    <div class="day next-date">3</div>
-                    <div class="day next-date">4</div>
-                    <div class="day next-date">5</div>
-                    <!-- prev-date; today; active; event; next-date -->
+                    <!-- we will add days with js -->
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-header">
+                <div class="today-date">
+                    <div class="event-day">Wed</div>
+                    <div class="event-date">13 February 2023</div>
+                </div>
+            </div>
+
+            <div class="right-body">
+
+                <div class="no-events">No events!</div>
+
+                <!-- we will add events through js -->
+                <div class="events">
+
+                </div>
+
+                <div class="right-footer">
+                    <div class="add-event-wrapper">
+                        <div class="add-event-header">
+                            <div class="add-title">Add Event</div>
+                            <!-- <i class="fas fa-times close"></i> -->
+                        </div>
+                        <div class="add-event-body">
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Event Name" class="event-name">
+                            </div>
+                            <i class="fa fa-plus-circle add-button"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="right"></div>
+        <!-- events -->
+
+
     </div>
+    </div>
+
+    <script src="calendar.js"></script>
 </body>
+
+</html>
